@@ -1,7 +1,10 @@
 const checklistStorageKey = "samina-home:checklists:v1";
 const budgetStorageKey = "samina-home:budget:v1";
+const brokerSettingsStorageKey = "samina-home:broker-settings:v1";
 const taskInputs = [...document.querySelectorAll("[data-task]")];
 const budgetInputs = [...document.querySelectorAll("[data-budget-field]")];
+const brokerFeeRateInput = document.querySelector("#broker-fee-rate");
+const brokerVatRateInput = document.querySelector("#broker-vat-rate");
 const statusMessage = document.querySelector("#save-status");
 const shekelFormatter = new Intl.NumberFormat("he-IL", {
   style: "currency",
@@ -93,6 +96,24 @@ function renderBudget() {
   } else {
     hint.textContent = "הוסיפו סכומים כדי לראות הערכה.";
   }
+
+  renderBrokerFees(values);
+}
+
+function renderBrokerFees(budgetValues = getBudgetValues()) {
+  const feeRate = Math.min(100, Math.max(0, Number(brokerFeeRateInput.value) || 0)) / 100;
+  const vatRate = Math.min(100, Math.max(0, Number(brokerVatRateInput.value) || 0)) / 100;
+  const saleFee = budgetValues.salePrice * feeRate * (1 + vatRate);
+  const purchaseFee = budgetValues.targetPrice * feeRate * (1 + vatRate);
+  document.querySelector("#sale-broker-fee").textContent = shekelFormatter.format(saleFee);
+  document.querySelector("#purchase-broker-fee").textContent = shekelFormatter.format(purchaseFee);
+  document.querySelector("#total-broker-fee").textContent = shekelFormatter.format(saleFee + purchaseFee);
+}
+
+function getBudgetValues() {
+  return Object.fromEntries(
+    budgetInputs.map((input) => [input.dataset.budgetField, Math.max(0, Number(input.value) || 0)]),
+  );
 }
 
 function saveBudget() {
@@ -132,8 +153,42 @@ function restoreBudget() {
   }
 }
 
+function restoreBrokerSettings() {
+  try {
+    const settings = readSavedJson(brokerSettingsStorageKey);
+    if (settings === null) {
+      return;
+    }
+    for (const [input, key] of [[brokerFeeRateInput, "feeRate"], [brokerVatRateInput, "vatRate"]]) {
+      if (settings[key] !== undefined) {
+        const value = Number(settings[key]);
+        if (!Number.isFinite(value) || value < 0 || value > 100) {
+          throw new Error("הגדרות המחשבון השמורות מחוץ לטווח.");
+        }
+        input.value = String(value);
+      }
+    }
+  } catch (error) {
+    showSaveStatus(`לא הצלחנו לטעון את הגדרות מחשבון התיווך. ${error.message}`, true);
+  }
+}
+
+function saveBrokerSettings() {
+  const settings = {
+    feeRate: brokerFeeRateInput.value,
+    vatRate: brokerVatRateInput.value,
+  };
+  try {
+    localStorage.setItem(brokerSettingsStorageKey, JSON.stringify(settings));
+  } catch (error) {
+    showSaveStatus(`לא ניתן לשמור את הגדרות מחשבון התיווך בדפדפן. ${error.message}`, true);
+  }
+  renderBrokerFees();
+}
+
 restoreChecklists();
 restoreBudget();
+restoreBrokerSettings();
 updateChecklistProgress();
 renderBudget();
 
@@ -143,4 +198,8 @@ for (const input of taskInputs) {
 
 for (const input of budgetInputs) {
   input.addEventListener("input", saveBudget);
+}
+
+for (const input of [brokerFeeRateInput, brokerVatRateInput]) {
+  input.addEventListener("input", saveBrokerSettings);
 }
