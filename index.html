@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f3eee5" />
+    <meta
+      name="description"
+      content="תוכנית הדרך של משפחת סמינה: מכירת הדירה, תכנון התקציב, וחיפוש הפנטהאוז הבא בחריש."
+    />
+    <title>Samina home | הדרך לפנטהאוז</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#home" aria-label="Samina home, לראש העמוד">
+          <span class="brand-mark" aria-hidden="true">⌂</span>
+          <span>Samina <span class="brand-light">home</span></span>
+        </a>
+        <nav class="nav" aria-label="ניווט ראשי">
+          <a href="#roadmap">תוכנית הדרך</a>
+          <a href="#budget">תכנון תקציב</a>
+          <a href="#checklists">צ׳קליסטים</a>
+          <a href="#links">חיפוש דירות</a>
+        </nav>
+        <a class="header-link" href="#checklists">מתחילים לתכנן <span aria-hidden="true">↙</span></a>
+      </header>
+
+      <main id="home">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow"><span aria-hidden="true">✦</span> הבית הבא של משפחת סמינה</p>
+            <h1 id="hero-title">הדרך שלנו<br />ל<span>פנטהאוז.</span></h1>
+            <p class="hero-description">
+              מוכרים את הדירה, מתכננים את הצעד הבא ומוצאים פנטהאוז שמתאים לחיים שלנו.
+              כל הדברים החשובים — במקום אחד.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#roadmap">בואו נתחיל <span aria-hidden="true">←</span></a>
+              <a class="button button-quiet" href="#links">לצפייה בדירות <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="hero-note"><span class="note-dot"></span> צעד־צעד, עם תוכנית ברורה</div>
+          </div>
+          <div class="hero-visual" aria-label="איור של בית חדש">
+            <div class="visual-sun"></div>
+            <div class="visual-orbit"></div>
+            <div class="house-illustration" aria-hidden="true">
+              <span class="house-roof"></span>
+              <span class="house-body"><i class="house-window window-one"></i><i class="house-window window-two"></i><i class="house-door"></i></span>
+              <span class="house-plant plant-one">✿</span>
+              <span class="house-plant plant-two">✿</span>
+            </div>
+            <div class="visual-label"><span>היעד הבא</span><strong>מקום לקרוא לו בית</strong></div>
+            <span class="visual-star star-one" aria-hidden="true">✳</span>
+            <span class="visual-star star-two" aria-hidden="true">✦</span>
+          </div>
+        </section>
+
+        <section class="quick-stats" aria-label="סיכום התכנון">
+          <article class="quick-card">
+            <span class="quick-icon" aria-hidden="true">✓</span>
+            <div><span>משימות שסומנו</span><strong id="completed-count">0</strong></div>
+            <span class="quick-caption">מתוך <span id="total-count">0</span> משימות</span>
+          </article>
+          <article class="quick-card">
+            <span class="quick-icon" aria-hidden="true">⌂</span>
+            <div><span>היעד שלנו</span><strong>פנטהאוז</strong></div>
+            <span class="quick-caption">בוחרים נכון, לא ממהרים</span>
+          </article>
+          <article class="quick-card">
+            <span class="quick-icon" aria-hidden="true">♡</span>
+            <div><span>אזור מועדף</span><strong>חריש</strong></div>
+            <span class="quick-caption">אפשר לשנות בכל שלב</span>
+          </article>
+        </section>
+
+        <section class="roadmap-section" id="roadmap" aria-labelledby="roadmap-title">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">קודם מבינים את הדרך</p>
+              <h2 id="roadmap-title">מתקדמים בשלבים</h2>
+              <p class="section-subtitle">אין צורך לעשות הכול ביום אחד — מסמנים וממשיכים בקצב שלכם.</p>
+            </div>
+            <span class="heading-stamp"><span aria-hidden="true">✦</span> תוכנית משפחתית</span>
+          </div>
+          <div class="roadmap-grid">
+            <article class="roadmap-card">
+              <span class="step-number">01</span>
+              <span class="roadmap-icon" aria-hidden="true">📋</span>
+              <h3>מכירים את המספרים</h3>
+              <p>בודקים כמה הדירה שווה, מה יתרת המשכנתא ומה התקציב הריאלי לרכישה.</p>
+            </article>
+            <article class="roadmap-card">
+              <span class="step-number">02</span>
+              <span class="roadmap-icon" aria-hidden="true">🏷️</span>
+              <h3>מכינים למכירה</h3>
+              <p>אוספים מסמכים, קובעים מחיר מבוסס ומשפרים את ההצגה של הדירה.</p>
+            </article>
+            <article class="roadmap-card">
+              <span class="step-number">03</span>
+              <span class="roadmap-icon" aria-hidden="true">🔎</span>
+              <h3>מחפשים בחוכמה</h3>
+              <p>מגדירים אזור ותקציב, משווים נכסים ובודקים כל פנטהאוז לעומק.</p>
+            </article>
+            <article class="roadmap-card">
+              <span class="step-number">04</span>
+              <span class="roadmap-icon" aria-hidden="true">🔑</span>
+              <h3>סוגרים ועוברים</h3>
+              <p>מתקדמים רק אחרי בדיקות מקצועיות, מימון מתוכנן ולוח זמנים ברור.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="budget-section" id="budget" aria-labelledby="budget-title">
+          <div class="budget-copy">
+            <p class="section-kicker">עושים סדר לפני שמתחייבים</p>
+            <h2 id="budget-title">תמונת התקציב שלנו</h2>
+            <p>מלאו הערכות ראשוניות כדי להבין את סדר הגודל. זו הערכה בלבד — בדקו את המספרים עם יועץ משכנתאות ואנשי מקצוע.</p>
+            <div class="budget-result" aria-live="polite">
+              <span>מקורות משוערים לפני עלויות</span>
+              <strong id="estimated-funds">₪0</strong>
+              <span class="budget-hint" id="budget-hint">הוסיפו סכומים כדי לראות הערכה.</span>
+            </div>
+          </div>
+          <form class="budget-form" id="budget-form">
+            <label class="money-field">
+              <span>שווי מכירה משוער של הדירה <small>₪</small></span>
+              <input type="number" min="0" step="10000" inputmode="numeric" name="sale-price" data-budget-field="salePrice" placeholder="למשל 1,800,000" />
+            </label>
+            <label class="money-field">
+              <span>יתרת משכנתא לסילוק <small>₪</small></span>
+              <input type="number" min="0" step="10000" inputmode="numeric" name="mortgage-balance" data-budget-field="mortgageBalance" placeholder="למשל 450,000" />
+            </label>
+            <label class="money-field">
+              <span>חסכונות זמינים <small>₪</small></span>
+              <input type="number" min="0" step="10000" inputmode="numeric" name="savings" data-budget-field="savings" placeholder="למשל 250,000" />
+            </label>
+            <label class="money-field">
+              <span>מחיר פנטהאוז יעד <small>₪</small></span>
+              <input type="number" min="0" step="10000" inputmode="numeric" name="target-price" data-budget-field="targetPrice" placeholder="למשל 2,600,000" />
+            </label>
+            <p class="budget-disclaimer">יש להביא בחשבון גם מסים, עורך דין, תיווך, מעבר, שיפוץ ועלויות מימון. הנתונים נשמרים בדפדפן הזה בלבד.</p>
+          </form>
+        </section>
+
+        <section class="checklists-section" id="checklists" aria-labelledby="checklists-title">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">לא שוכחים שום פרט</p>
+              <h2 id="checklists-title">צ׳קליסטים בדרך לבית החדש</h2>
+              <p class="section-subtitle">לחצו על משימה כדי לסמן אותה. ההתקדמות נשמרת בדפדפן.</p>
+              <p class="save-status" id="save-status" role="status" aria-live="polite"></p>
+            </div>
+            <div class="progress-summary"><strong id="checklist-progress">0%</strong><span>התקדמות כללית</span></div>
+          </div>
+
+          <div class="checklist-grid">
+            <article class="checklist-card" aria-labelledby="sell-title">
+              <div class="checklist-heading">
+                <span class="checklist-icon sell-icon" aria-hidden="true">🏠</span>
+                <div><span class="checklist-label">שלב א׳</span><h3 id="sell-title">מכירת הדירה שלנו</h3></div>
+              </div>
+              <p class="checklist-intro">להכין את הבית ואת המסמכים, ולמכור בתנאים שמתאימים לתוכנית.</p>
+              <div class="task-list" data-checklist="selling">
+                <label class="task-item"><input type="checkbox" data-task="sale-value" /><span class="task-check"></span><span class="task-text"><strong>לבדוק מחירי עסקאות ודירות דומות</strong><small>להשוות נכסים דומים באזור, לא רק מחירי מודעות.</small></span></label>
+                <label class="task-item"><input type="checkbox" data-task="sale-documents" /><span class="task-check"></span><span class="task-text"><strong>לאסוף מסמכי בעלות ותוכניות</strong><small>נסח רישום, תשריט, היתר ומידע על הצמדות.</small></span></label>
+                <label class="task-item"><input type="checkbox" data-task="mortgage-payoff" /><span class="task-check"></span><span class="task-text"><strong>לבקש מהבנק יתרה לסילוק משכנתא</strong><small>כולל בדיקת עמלות פירעון מוקדם ותוקף האישור.</small></span></label>
+                <label class="task-item"><input type="checkbox" data-task="sale-tax" /><span class="task-check"></span><span class="task-text"><strong>לבדוק מס שבח והיטל השבחה</strong><small>לברר זכאות לפטור, חבות ומועדים מול עורך דין/יועץ מס.</small></span></label>
+                <label class="task-item"><input type="checkbox" data-task="agent-lawyer" /><span class="task-check"></span><span class="task-text"><strong>לבחור עורך דין ולברר אם צריך תיווך</strong><small>להבין שכר טרחה, שירות והסכם בכתב לפני התחייבות.</small></span></label>
+                <label class="task-item"><input type="checkbox" data-task="sale-prep" /><span class="task-check"></span><span class="task-text"><strong>להכין את הדירה לצילום ולביקורים</strong><small>סידור, ניקיון, תיקונים קטנים ותיק מסמכים מסודר.</small></span></label>
+                <label class="task-item"><input type="checkbox" data-task="sale-contract" /><span class="task-check"></span><span class="task-text"><strong>לתכנן מועד פינוי ותנאי תשלום</strong><small>לתאם מסירה, תשלומים, מעבר ופתרון ביניים במידת הצורך.</small></span></label>
+              </div>
+              <div class="list-progress"><span data-progress-label="selling">0 מתוך 7 משימות</span><div class="mini-progress"><span data-progress-bar="selling"></span></div></div>
+            </article>
+
+            <article class="checklist-card" aria-labelledby="buy-title">
+              <div class="checklist-heading">
+                <span class="checklist-icon buy-icon" aria-hidden="true">🔑</span>
+                <div><span class="checklist-label">שלב ב׳</span><h3 id="buy-title">קניית הפנטהאוז</h3></div>
+              </div>
+              <p class="checklist-intro">בודקים את הנכס, הבניין והמספרים לפני חתימה או העברת כסף.</p>
+              <div class="task-list" data-checklist="buying">
+                <label class="task-item"><input type="checkbox" data-task="mortgage-approval" /><span class="task-check"></span><span class="task-text"><strong>לקבל אישור עקרוני ולבנות תקציב מלא</strong><small>כולל מס רכישה, עו״ד, תיווך, שיפוץ, הובלה ורזרבה.</small></span></label>
+                <label class="task-item"><input type="checkbox" data-task="ownership-check" /><span class="task-check"></span><span class="task-text"><strong>לבדוק בעלות, שעבודים וזכויות בנכס</strong><small>עו״ד יבדוק רישום, הצמדות, חניה, מחסן וזכויות גג.</small></span></label>
+                <label class="task-item"><input type="checkbox" data-task="permit-check" /><span class="task-check"></span><span class="task-text"><strong>לוודא היתר בנייה והתאמה לתוכניות</strong><small>לבדוק סגירת מרפסת, הרחבות וכל תוספת מול העירייה.</small></span></label>
+                <label class="task-item"><input type="checkbox" data-task="penthouse-inspection" /><span class="task-check"></span><span class="task-text"><strong>להזמין בדק בית / מהנדס</strong><small>דגש על איטום גג ומרפסת, ניקוז, רטיבות, סדקים וחשיפה לשמש.</small></span></label>
+                <label class="task-item"><input type="checkbox" data-task="building-costs" /><span class="task-check"></span><span class="task-text"><strong>לברר הוצאות שוטפות בבניין</strong><small>ועד בית, מעליות, תחזוקת גג, ביטוח ותיקונים מתוכננים.</small></span></label>
+                <label class="task-item"><input type="checkbox" data-task="neighborhood-check" /><span class="task-check"></span><span class="task-text"><strong>לבקר בשכונה ובבניין בשעות שונות</strong><small>לבדוק רעש, חניה, תחבורה, מוסדות, בנייה עתידית ותחושת ביטחון.</small></span></label>
+                <label class="task-item"><input type="checkbox" data-task="valuation-check" /><span class="task-check"></span><span class="task-text"><strong>להשלים שמאות, מימון וחוזה אצל עו״ד</strong><small>לא לחתום על זיכרון דברים או להעביר מקדמה בלי ייעוץ משפטי.</small></span></label>
+              </div>
+              <div class="list-progress"><span data-progress-label="buying">0 מתוך 7 משימות</span><div class="mini-progress"><span data-progress-bar="buying"></span></div></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="links-section" id="links" aria-labelledby="links-title">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">מתחילים לחפש</p>
+              <h2 id="links-title">קישורים שימושיים לדירות</h2>
+              <p class="section-subtitle">פותחים חיפוש מעודכן, מסננים לפי תקציב ואזור ושומרים דירות להשוואה.</p>
+            </div>
+            <span class="links-decoration" aria-hidden="true">⌕</span>
+          </div>
+          <div class="table-wrap">
+            <table class="links-table">
+              <thead><tr><th scope="col">אתר</th><th scope="col">מה אפשר למצוא?</th><th scope="col">קישור</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><span class="site-name"><span class="site-badge yad2">Y2</span> יד2</span></td>
+                  <td>מודעות נדל״ן למכירה — חפשו „חריש” וסננו לפי פנטהאוז, מחיר וחדרים.</td>
+                  <td><a class="table-link" href="https://www.yad2.co.il/realestate/forsale" target="_blank" rel="noopener noreferrer">פתיחת יד2 <span aria-hidden="true">↗</span></a></td>
+                </tr>
+                <tr>
+                  <td><span class="site-name"><span class="site-badge madlan">מ</span> מדלן</span></td>
+                  <td>מודעות ומידע על שכונות ועסקאות. חפשו חריש ובדקו פרטים לפני שמסתמכים.</td>
+                  <td><a class="table-link" href="https://www.madlan.co.il/" target="_blank" rel="noopener noreferrer">פתיחת מדלן <span aria-hidden="true">↗</span></a></td>
+                </tr>
+                <tr>
+                  <td><span class="site-name"><span class="site-badge search">⌕</span> חיפוש ממוקד</span></td>
+                  <td>תוצאות חיפוש לדירות ופנטהאוזים למכירה בחריש ממקורות שונים.</td>
+                  <td><a class="table-link" href="https://www.google.com/search?q=%D7%A4%D7%A0%D7%98%D7%94%D7%90%D7%95%D7%96+%D7%93%D7%99%D7%A8%D7%94+%D7%9C%D7%9E%D7%9B%D7%99%D7%A8%D7%94+%D7%97%D7%A8%D7%99%D7%A9" target="_blank" rel="noopener noreferrer">חיפוש בחריש <span aria-hidden="true">↗</span></a></td>
+                </tr>
+                <tr>
+                  <td><span class="site-name"><span class="site-badge gov">₪</span> מידע מיסוי</span></td>
+                  <td>מידע וסימולטורים של רשות המסים. בדקו את חבות המס העדכנית עם איש מקצוע.</td>
+                  <td><a class="table-link" href="https://www.gov.il/he/departments/israel_tax_authority/govil-landing-page" target="_blank" rel="noopener noreferrer">רשות המסים <span aria-hidden="true">↗</span></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="links-note"><span aria-hidden="true">ⓘ</span> קישורים לאתרים חיצוניים. זמינות מודעות ותנאים משתנים; יש לאמת כל פרט מול המוכר ואנשי מקצוע.</p>
+        </section>
+
+        <section class="reminder-banner">
+          <span class="reminder-icon" aria-hidden="true">☀</span>
+          <div><strong>בית טוב מתחיל בהחלטות טובות.</strong><p>משווים, בודקים, מתייעצים — ורק אז מתקדמים לחתימה.</p></div>
+          <a href="#checklists">חזרה לצ׳קליסט <span aria-hidden="true">↑</span></a>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">⌂</span><span>Samina <span class="brand-light">home</span></span></a>
+        <p>בונים את הדרך לבית הבא, ביחד.</p>
+        <a href="#home">לראש העמוד ↑</a>
+      </footer>
+    </div>
+  </body>
+</html>
